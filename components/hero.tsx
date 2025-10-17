@@ -1,10 +1,13 @@
 import { Calendar, PenTool, Timer } from "lucide-react"
 import Image from "next/image"
 import { AnimatedButton } from "./animated-button"
+import { UnicornBackground } from "./unicorn-background"
 
 export function Hero() {
   return (
     <section id="hero" className="relative z-10 overflow-hidden px-6 pt-24 pb-16 lg:px-8 lg:pt-32 lg:pb-24">
+      <UnicornBackground />
+
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
