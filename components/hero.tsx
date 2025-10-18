@@ -1,4 +1,4 @@
-import { Calendar, PenTool, Timer } from "lucide-react"
+import { PenTool, Timer } from "lucide-react"
 import Image from "next/image"
 import { AnimatedButton } from "./animated-button"
 import { UnicornBackground } from "./unicorn-background"
@@ -21,23 +21,16 @@ export function Hero() {
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-slate-100 leading-[1.1]">
-              Product Designer Lead
+              Designing human-centered products that ship
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-300/90 leading-relaxed max-w-xl">
-              Transforming complex problems into elegant, user-centered solutions. Specializing in design systems,
-              product strategy, and end-to-end UX.
+              I lead end-to-end product design—from discovery to systems and production-ready prototypes. I partner
+              closely with engineering to deliver measurable outcomes for public mobility and payments at scale.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <AnimatedButton href="#contact">Book a call</AnimatedButton>
-              <a
-                href="#"
-                className="inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-medium text-sky-300 ring-1 ring-sky-400/40 hover:bg-sky-400/10 transition-colors"
-              >
-                <Calendar className="h-4 w-4" />
-                Schedule Intro
-              </a>
+              <AnimatedButton href="#contact">Schedule call</AnimatedButton>
             </div>
           </div>
 

@@ -65,7 +65,7 @@ const steps = [
 
 export function DesignThinking() {
   return (
-    <section id="about" className="relative overflow-hidden px-6 py-28 md:py-32">
+    <section id="design-process" className="relative overflow-hidden px-6 py-28 md:py-32">
       <div className="mx-auto max-w-7xl relative">
         {/* Pill */}
         <div className="mx-auto w-fit rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-slate-300/90 backdrop-blur">

@@ -2,13 +2,11 @@
 
 import type React from "react"
 
-import { useState } from "react"
-import { Menu, Moon, Sun } from "lucide-react"
+import { Menu } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 export function Navbar() {
-  const [isDark, setIsDark] = useState(true)
   const pathname = usePathname()
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -22,7 +20,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-black/50 border-b border-white/5">
+    <header className="sticky top-0 z-50 backdrop-blur-xl bg-gradient-to-b from-black/70 via-black/40 to-transparent border-b border-white/5">
       <nav className="mx-auto max-w-7xl px-6 lg:px-8 py-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -54,27 +52,27 @@ export function Navbar() {
                 href="#case-study"
                 onClick={(e) => handleNavClick(e, "#case-study")}
               >
-                Case study
+                Case Studies
               </a>
               <a
                 className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="#case-study"
-                onClick={(e) => handleNavClick(e, "#case-study")}
+                href="#design-process"
+                onClick={(e) => handleNavClick(e, "#design-process")}
               >
-                Case Studies
+                Design Process
               </a>
               <Link
                 className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
                 href="/about"
               >
-                About
+                Experiences
               </Link>
               <a
                 className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="#resources"
-                onClick={(e) => handleNavClick(e, "#resources")}
+                href="#contact"
+                onClick={(e) => handleNavClick(e, "#contact")}
               >
-                Resources
+                Contact
               </a>
             </>
           ) : (
@@ -86,40 +84,31 @@ export function Navbar() {
                 className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
                 href="/#case-study"
               >
-                Case study
+                Case Studies
               </Link>
               <Link
                 className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="/#case-study"
+                href="/#design-process"
               >
-                Case Studies
+                Design Process
               </Link>
               <Link
                 className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
                 href="/about"
               >
-                About
+                Experiences
               </Link>
               <Link
                 className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="/#resources"
+                href="/#contact"
               >
-                Resources
+                Contact
               </Link>
             </>
           )}
         </div>
 
-        {/* Theme Toggle & Mobile Menu */}
         <div className="flex items-center gap-2">
-          <button
-            onClick={() => setIsDark(!isDark)}
-            aria-label="Toggle theme"
-            className="hidden md:inline-flex h-10 w-10 items-center justify-center rounded-md ring-1 ring-white/10 hover:bg-white/5 text-slate-200 transition-colors"
-          >
-            {isDark ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
-          </button>
-
           <button
             aria-label="Menu"
             className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md ring-1 ring-white/10 hover:bg-white/5 text-slate-200 transition-colors"
