@@ -10,7 +10,7 @@ export function AnimatedButton({ href, children }: AnimatedButtonProps) {
   return (
     <a
       href={href}
-      className="animated-button group relative inline-flex items-center justify-center overflow-hidden rounded-xl px-[18px] py-3 text-sm font-medium text-white ring-1 ring-white/10 shadow-lg transition-all hover:from-violet-400 hover:to-indigo-400 active:scale-95 sm:w-auto w-full"
+      className="animated-button group relative inline-flex items-center justify-center overflow-hidden rounded-full px-[18px] py-3 text-sm font-medium text-white ring-1 ring-white/10 shadow-lg transition-all hover:from-violet-400 hover:to-indigo-400 active:scale-95 sm:w-auto w-full"
       style={{
         background:
           "radial-gradient(65.28% 65.28% at 50% 100%, rgba(223, 113, 255, 0.8) 0%, rgba(223, 113, 255, 0) 100%), linear-gradient(0deg, rgb(122, 90, 248), rgb(122, 90, 248))",
@@ -24,7 +24,7 @@ export function AnimatedButton({ href, children }: AnimatedButtonProps) {
             "radial-gradient(100% 75% at 55% center, rgba(223, 113, 255, 0.8) 0%, rgba(223, 113, 255, 0) 100%)",
           boxShadow: "0 0 3px black",
           borderBottomLeftRadius: "0.5rem",
-          borderTopRightRadius: "0.75rem",
+          borderTopRightRadius: "9999px",
         }}
       >
         <div
@@ -70,13 +70,13 @@ export function AnimatedButton({ href, children }: AnimatedButtonProps) {
 
       {/* Gradient layers */}
       <div
-        className="absolute inset-[1px] rounded-[11px] z-0 transition-all duration-500"
+        className="absolute inset-[1px] rounded-full z-0 transition-all duration-500"
         style={{
           background: "linear-gradient(177.95deg, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0) 100%)",
         }}
       />
       <div
-        className="absolute inset-[2px] rounded-[10px] z-0 transition-all duration-500"
+        className="absolute inset-[2px] rounded-full z-0 transition-all duration-500"
         style={{
           background:
             "radial-gradient(65.28% 65.28% at 50% 100%, rgba(223, 113, 255, 0.8) 0%, rgba(223, 113, 255, 0) 100%), linear-gradient(0deg, #7a5af8, #7a5af8)",

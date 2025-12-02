@@ -6,7 +6,7 @@ export function ResearchInsights() {
     <section id="resources" className="relative px-6 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-3xl sm:text-4xl md:text-5xl tracking-tight font-semibold text-white">
-          Research & Insights
+          Articles & insights
         </h2>
         <p className="mt-3 text-base sm:text-lg text-neutral-400">
           Deep dives, experiments, and guides at the intersection of design and engineering.
@@ -32,8 +32,8 @@ export function ResearchInsights() {
 
                 <div className="mt-8 overflow-hidden rounded-xl ring-1 ring-neutral-200/10">
                   <Image
-                    src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1600&auto=format&fit=crop"
-                    alt="3D abstract render"
+                    src="/design-tokens-color-palette-typography-spacing-var.jpg"
+                    alt="Design tokens and variables visualization"
                     width={600}
                     height={300}
                     className="w-full h-44 object-cover"
@@ -42,7 +42,7 @@ export function ResearchInsights() {
 
                 <div className="mt-8 flex items-center gap-3 text-sm text-white">
                   <a
-                    href="#"
+                    href="/insights/design-tokens-production"
                     className="inline-flex items-center gap-2 font-medium hover:text-neutral-300 transition-colors"
                   >
                     Read the guide
@@ -65,25 +65,23 @@ export function ResearchInsights() {
                 </p>
 
                 <div className="mt-8 grid grid-cols-3 gap-3">
-                  {[
-                    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200",
-                    "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200",
-                    "https://images.unsplash.com/photo-1506765515384-028b60a970df?q=80&w=1200",
-                  ].map((src, i) => (
-                    <Image
-                      key={i}
-                      src={src || "/placeholder.svg"}
-                      alt="Research visual"
-                      width={200}
-                      height={150}
-                      className="h-24 w-full object-cover rounded-lg ring-1 ring-neutral-200/10"
-                    />
-                  ))}
+                  {["/git-pull-request-code-diff-green-red-lines-dark-th.jpg", "/code-review-comments-github-interface-dark-mode.jpg", "/version-control-branches-merge-diagram-dark.jpg"].map(
+                    (src, i) => (
+                      <Image
+                        key={i}
+                        src={src || "/placeholder.svg"}
+                        alt="Semantic PR visual"
+                        width={200}
+                        height={150}
+                        className="h-24 w-full object-cover rounded-lg ring-1 ring-neutral-200/10"
+                      />
+                    ),
+                  )}
                 </div>
 
                 <div className="mt-8 flex items-center gap-3 text-sm text-white">
                   <a
-                    href="#"
+                    href="/insights/semantic-prs"
                     className="inline-flex items-center gap-2 font-medium hover:text-neutral-300 transition-colors"
                   >
                     See findings
@@ -107,8 +105,8 @@ export function ResearchInsights() {
 
                 <div className="mt-8 overflow-hidden rounded-xl ring-1 ring-neutral-200/10">
                   <Image
-                    src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1600&auto=format&fit=crop"
-                    alt="Team collaboration"
+                    src="/accessibility-a11y-wcag-contrast-checker-inclusive.jpg"
+                    alt="Accessibility and contrast checking interface"
                     width={600}
                     height={300}
                     className="w-full h-44 object-cover"
@@ -117,7 +115,7 @@ export function ResearchInsights() {
 
                 <div className="mt-8 flex items-center gap-3 text-sm text-white">
                   <a
-                    href="#"
+                    href="/insights/accessible-components-scale"
                     className="inline-flex items-center gap-2 font-medium hover:text-neutral-300 transition-colors"
                   >
                     Read case study
@@ -132,7 +130,7 @@ export function ResearchInsights() {
           <div className="border-t border-neutral-200/10">
             <div className="flex p-6 items-center justify-center">
               <a
-                href="#"
+                href="/insights"
                 className="inline-flex items-center gap-3 text-base sm:text-lg font-medium text-white hover:text-neutral-300 transition-colors"
               >
                 Explore all insights

@@ -1,4 +1,4 @@
-import { PenTool, Timer } from "lucide-react"
+import { PenTool } from "lucide-react"
 import Image from "next/image"
 import { AnimatedButton } from "./animated-button"
 import { UnicornBackground } from "./unicorn-background"
@@ -17,47 +17,69 @@ export function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <span className="text-xs font-medium text-slate-200/90">Available for select projects</span>
+              <span className="text-xs font-medium text-slate-200/90">Open to selected opportunities</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-slate-100 leading-[1.1]">
-              Designing human-centered products that ship
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-100 leading-[1.1] text-balance">
+              Designing human-centered products
+              <br className="hidden sm:block" />
+              that shape the future
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-300/90 leading-relaxed max-w-xl">
-              I lead end-to-end product design—from discovery to systems and production-ready prototypes. I partner
-              closely with engineering to deliver measurable outcomes for public mobility and payments at scale.
+              I shape products from the ground up, bridging research, system design, and implementation. My focus is
+              creating scalable, user-centered solutions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <AnimatedButton href="#contact">Schedule call</AnimatedButton>
+              <AnimatedButton href="#contact">Let's connect...</AnimatedButton>
             </div>
           </div>
 
-          {/* Right Image */}
-          <div className="relative">
-            <div className="absolute -top-10 -right-10 h-64 w-64 sm:h-80 sm:w-80 rounded-full bg-gradient-to-br from-fuchsia-500/10 via-indigo-500/10 to-sky-500/10 blur-3xl"></div>
-            <div className="relative aspect-square rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gradient-to-tr from-slate-900 to-slate-900/60">
+          {/* Right Content - Profile Image */}
+          <div className="relative flex justify-center lg:justify-end">
+            {/* Animated gradient glow effects - increased size for larger image */}
+            <div className="absolute -top-10 -right-10 h-72 w-72 rounded-full bg-gradient-to-br from-purple-500/20 via-fuchsia-500/20 to-pink-500/20 blur-3xl animate-pulse"></div>
+            <div
+              className="absolute -bottom-10 -left-10 h-72 w-72 rounded-full bg-gradient-to-tr from-blue-500/20 via-cyan-500/20 to-teal-500/20 blur-3xl animate-pulse"
+              style={{ animationDelay: "1s" }}
+            ></div>
+
+            {/* Profile photo container - increased to full scale (1:1) */}
+            <div className="relative w-full max-w-[420px] aspect-square rounded-full overflow-hidden ring-2 ring-purple-500/30 shadow-2xl shadow-purple-500/20">
+              {/* Decorative rings */}
+              <div
+                className="absolute inset-0 rounded-full border-2 border-purple-500/20 animate-ping"
+                style={{ animationDuration: "3s" }}
+              ></div>
+              <div className="absolute inset-3 rounded-full border border-fuchsia-500/30"></div>
+
+              {/* Gradient overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10 z-10"></div>
+
+              {/* Profile photo */}
               <Image
-                src="https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1200&auto=format&fit=crop"
-                alt="Futuristic 3D render of a designer wearing a headset"
+                src="/images/avatar.svg"
+                alt="Hesham Faragallah - Product Designer Lead"
                 fill
-                className="object-cover opacity-90 mix-blend-screen"
+                className="object-cover"
+                priority
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/20 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-white/5 ring-1 ring-white/10">
-                    <PenTool className="h-4 w-4 text-sky-300" />
-                  </span>
-                  <p className="text-sm text-slate-200/90">From vision to validated MVP</p>
-                </div>
-                <div className="hidden sm:flex items-center gap-2 text-xs text-slate-400">
-                  <Timer className="h-4 w-4" />
-                  <span>2–6 week sprints</span>
+
+              {/* Bottom gradient fade */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent z-10"></div>
+
+              {/* Floating badge - increased badge size */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
+                <div className="flex items-center gap-2 rounded-full border border-white/20 bg-slate-900/80 backdrop-blur-md px-4 py-2 shadow-lg">
+                  <PenTool className="h-4 w-4 text-purple-400" />
+                  <span className="text-sm font-medium text-slate-100">Hesham Faragallah</span>
                 </div>
               </div>
             </div>
+
+            {/* Accent glow on edges */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500/0 via-purple-500/5 to-blue-500/0"></div>
           </div>
         </div>
       </div>

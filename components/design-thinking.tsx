@@ -1,4 +1,5 @@
 import { Users, Target, Sparkles, Box, FlaskConical, Send, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 const steps = [
   {
@@ -67,17 +68,21 @@ export function DesignThinking() {
   return (
     <section id="design-process" className="relative overflow-hidden px-6 py-28 md:py-32">
       <div className="mx-auto max-w-7xl relative">
-        {/* Pill */}
-        <div className="mx-auto w-fit rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-slate-300/90 backdrop-blur">
-          Our process
-        </div>
-
         {/* Title */}
-        <div className="mx-auto mt-6 max-w-3xl text-center">
-          <h2 className="text-4xl md:text-6xl tracking-tight font-semibold text-slate-100">Design Thinking</h2>
-          <p className="mt-4 text-sm md:text-base text-slate-300/90">
-            A structured path from insight to impact—de-risk decisions, align teams, and ship what matters.
-          </p>
+        <div className="flex items-start justify-between gap-4">
+          <div className="text-left">
+            <h2 className="text-4xl md:text-6xl tracking-tight font-semibold text-slate-100">Design Thinking</h2>
+            <p className="mt-4 text-sm md:text-base text-slate-300/90">
+              A structured path from insight to impact—de-risk decisions, align teams, and ship what matters.
+            </p>
+          </div>
+
+          <Link
+            href="/my-approach"
+            className="shrink-0 px-6 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white text-sm font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+          >
+            My Approach
+          </Link>
         </div>
 
         {/* Decorative background */}

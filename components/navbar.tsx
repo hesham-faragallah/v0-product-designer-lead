@@ -4,7 +4,9 @@ import type React from "react"
 
 import { Menu } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
+import { cn } from "@/lib/utils"
 
 export function Navbar() {
   const pathname = usePathname()
@@ -19,20 +21,46 @@ export function Navbar() {
     }
   }
 
+  const isActive = (href: string) => {
+    // Home page - exact match only
+    if (href === "/" || href === "#hero") return pathname === "/"
+
+    // Hash links on homepage - only active when on homepage
+    if (href.startsWith("#") || href.startsWith("/#")) return false
+
+    // Case Studies page - exact match only (not case study detail pages)
+    if (href === "/case-studies") return pathname === "/case-studies"
+
+    // My Approach page - exact match
+    if (href === "/my-approach") return pathname === "/my-approach"
+
+    // About/Experiences page - exact match
+    if (href === "/about") return pathname === "/about"
+
+    // Insights page - exact match
+    if (href === "/insights") return pathname === "/insights"
+
+    // Case study detail pages - match pattern /case-study/*
+    if (href.startsWith("/case-study/")) return pathname === href
+
+    // Default: exact match
+    return pathname === href
+  }
+
+  const navLinkClass = (href: string) =>
+    cn(
+      "text-sm transition-colors relative py-1",
+      isActive(href)
+        ? "text-white font-medium after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-gradient-to-r after:from-emerald-400 after:to-teal-400 after:rounded-full"
+        : "text-slate-300/90 hover:text-slate-100 font-normal",
+    )
+
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-gradient-to-b from-black/70 via-black/40 to-transparent border-b border-white/5">
       <nav className="mx-auto max-w-7xl px-6 lg:px-8 py-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-sky-500 to-fuchsia-500 ring-1 ring-inset ring-white/10 shadow-lg shadow-fuchsia-500/10">
-            <span className="sr-only">Logo</span>
-            <svg viewBox="0 0 24 24" className="h-4 w-4 text-white">
-              <path
-                fill="currentColor"
-                d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2zm0 2.3L6 6.7v6.6l6 3.4 6-3.4V6.7l-6-2.4z"
-              />
-            </svg>
-          </span>
+          <Image src="/mylogo.png" alt="Hesham Faragalla Logo" width={36} height={36} className="rounded-lg" />
           <span className="text-lg font-medium text-slate-100 tracking-tight">Hesham Faragalla</span>
         </Link>
 
@@ -40,68 +68,47 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           {pathname === "/" ? (
             <>
-              <a
-                className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="#hero"
-                onClick={(e) => handleNavClick(e, "#hero")}
-              >
+              <a className={navLinkClass("#hero")} href="#hero" onClick={(e) => handleNavClick(e, "#hero")}>
                 Home
               </a>
-              <a
-                className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="#case-study"
-                onClick={(e) => handleNavClick(e, "#case-study")}
-              >
+              <Link className={navLinkClass("/case-studies")} href="/case-studies">
                 Case Studies
-              </a>
+              </Link>
               <a
-                className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
+                className={navLinkClass("#design-process")}
                 href="#design-process"
                 onClick={(e) => handleNavClick(e, "#design-process")}
               >
                 Design Process
               </a>
-              <Link
-                className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="/about"
-              >
+              <Link className={navLinkClass("/my-approach")} href="/my-approach">
+                My Approach
+              </Link>
+              <Link className={navLinkClass("/about")} href="/about">
                 Experiences
               </Link>
-              <a
-                className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="#contact"
-                onClick={(e) => handleNavClick(e, "#contact")}
-              >
+              <a className={navLinkClass("#contact")} href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
                 Contact
               </a>
             </>
           ) : (
             <>
-              <Link className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal" href="/">
+              <Link className={navLinkClass("/")} href="/">
                 Home
               </Link>
-              <Link
-                className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="/#case-study"
-              >
+              <Link className={navLinkClass("/case-studies")} href="/case-studies">
                 Case Studies
               </Link>
-              <Link
-                className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="/#design-process"
-              >
+              <Link className={navLinkClass("/#design-process")} href="/#design-process">
                 Design Process
               </Link>
-              <Link
-                className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="/about"
-              >
+              <Link className={navLinkClass("/my-approach")} href="/my-approach">
+                My Approach
+              </Link>
+              <Link className={navLinkClass("/about")} href="/about">
                 Experiences
               </Link>
-              <Link
-                className="text-slate-300/90 hover:text-slate-100 transition-colors text-sm font-normal"
-                href="/#contact"
-              >
+              <Link className={navLinkClass("/#contact")} href="/#contact">
                 Contact
               </Link>
             </>

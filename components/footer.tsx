@@ -1,5 +1,5 @@
 export function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = 2026
 
   return (
     <footer className="relative z-10">
@@ -7,7 +7,7 @@ export function Footer() {
         <div className="border-t border-white/[0.06] mt-20 pt-10 pb-10">
           <div className="flex flex-col gap-4 md:flex-row items-center justify-center">
             <p className="text-xs text-white/50">
-              © <span>{currentYear}</span> Alex Chen. All rights reserved.
+              © <span>{currentYear}</span> Hesham Faragalla. All rights reserved.
             </p>
           </div>
         </div>

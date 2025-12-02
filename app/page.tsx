@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
-import { Portfolio } from "@/components/portfolio"
+import PortfolioGrid from "@/components/portfolio-grid"
 import { DesignThinking } from "@/components/design-thinking"
 import { ResearchInsights } from "@/components/research-insights"
 import { Testimonials } from "@/components/testimonials"
@@ -36,7 +36,10 @@ export default function Home() {
 
       <Navbar />
       <Hero />
-      <Portfolio />
+
+      <section id="case-study">
+        <PortfolioGrid />
+      </section>
       <DesignThinking />
       <ResearchInsights />
       <Testimonials />

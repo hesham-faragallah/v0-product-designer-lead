@@ -79,55 +79,105 @@ export function Portfolio() {
               </div>
 
               {/* Mobile app project */}
-              <ProjectCard
-                image="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/fb6b509f-d7d6-4c5a-ab4e-9cc3661e184b_800w.jpg"
-                icon={<Smartphone className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
-                title="Banking App"
-                description="Fintech mobile solution"
-              />
-
-              {/* Brand identity */}
-              <ProjectCard
-                image="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/c987757e-3c22-4afb-8315-50113caa4754_800w.jpg"
-                icon={<Palette className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
-                title="Brand Identity"
-                description="Complete visual system"
-              />
-
-              {/* Dashboard */}
-              <ProjectCard
-                image="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/6739d5c9-2ec9-43c0-94be-ec961704a2e0_800w.jpg"
-                icon={<Palette className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
-                title="Dashboard Design"
-                description="Analytics platform"
-              />
-
-              {/* Video project */}
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 group hover:border-white/20 transition-all duration-300">
-                <div className="aspect-square relative overflow-hidden">
-                  <Image
-                    src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/dcb7f82e-bf8a-4d5c-8c36-ce765f8a2932_800w.jpg"
-                    alt="Video platform"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/60"></div>
-                  <div className="absolute top-2 sm:top-3 left-2 sm:left-3">
-                    <span className="inline-flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-white/90 bg-white/10 border-white/15 border rounded-full py-1 sm:py-1.5 px-1.5 sm:px-2 backdrop-blur">
-                      <Play className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-                    </span>
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-white/20 backdrop-blur flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Play className="h-5 w-5 sm:h-6 sm:w-6 text-white ml-0.5 sm:ml-1" />
+              <a href="/case-study/rta-public-transport" className="block">
+                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 group hover:border-white/20 transition-all duration-300">
+                  <div className="aspect-square relative overflow-hidden">
+                    <Image
+                      src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/fb6b509f-d7d6-4c5a-ab4e-9cc3661e184b_800w.jpg"
+                      alt="Banking App"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/60"></div>
+                    <div className="absolute top-2 sm:top-3 left-2 sm:left-3">
+                      <span className="inline-flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-white/90 bg-white/10 border-white/15 border rounded-full py-1 sm:py-1.5 px-1.5 sm:px-2 backdrop-blur">
+                        <Smartphone className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      </span>
                     </div>
                   </div>
+                  <div className="p-3 sm:p-4">
+                    <h3 className="text-sm sm:text-base font-medium text-white tracking-tight">Banking App</h3>
+                    <p className="text-xs sm:text-sm text-neutral-400 mt-0.5 sm:mt-1">Fintech mobile solution</p>
+                  </div>
                 </div>
-                <div className="p-2.5 sm:p-3">
-                  <h3 className="text-xs sm:text-sm font-medium text-white tracking-tight">Video Platform</h3>
-                  <p className="text-[10px] sm:text-xs text-neutral-400 mt-0.5 sm:mt-1">Streaming interface</p>
+              </a>
+
+              {/* Brand identity */}
+              <a href="/case-study/rta-public-transport" className="block">
+                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 group hover:border-white/20 transition-all duration-300">
+                  <div className="aspect-square relative overflow-hidden">
+                    <Image
+                      src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/c987757e-3c22-4afb-8315-50113caa4754_800w.jpg"
+                      alt="Brand Identity"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/60"></div>
+                    <div className="absolute top-2 sm:top-3 left-2 sm:left-3">
+                      <span className="inline-flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-white/90 bg-white/10 border-white/15 border rounded-full py-1 sm:py-1.5 px-1.5 sm:px-2 backdrop-blur">
+                        <Palette className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-3 sm:p-4">
+                    <h3 className="text-sm sm:text-base font-medium text-white tracking-tight">Brand Identity</h3>
+                    <p className="text-xs sm:text-sm text-neutral-400 mt-0.5 sm:mt-1">Complete visual system</p>
+                  </div>
                 </div>
-              </div>
+              </a>
+
+              {/* Dashboard */}
+              <a href="/case-study/rta-public-transport" className="block">
+                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 group hover:border-white/20 transition-all duration-300">
+                  <div className="aspect-square relative overflow-hidden">
+                    <Image
+                      src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/6739d5c9-2ec9-43c0-94be-ec961704a2e0_800w.jpg"
+                      alt="Dashboard Design"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/60"></div>
+                    <div className="absolute top-2 sm:top-3 left-2 sm:left-3">
+                      <span className="inline-flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-white/90 bg-white/10 border-white/15 border rounded-full py-1 sm:py-1.5 px-1.5 sm:px-2 backdrop-blur">
+                        <Palette className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-3 sm:p-4">
+                    <h3 className="text-sm sm:text-base font-medium text-white tracking-tight">Dashboard Design</h3>
+                    <p className="text-xs sm:text-sm text-neutral-400 mt-0.5 sm:mt-1">Analytics platform</p>
+                  </div>
+                </div>
+              </a>
+
+              {/* Video project */}
+              <a href="/case-study/rta-public-transport" className="block">
+                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 group hover:border-white/20 transition-all duration-300">
+                  <div className="aspect-square relative overflow-hidden">
+                    <Image
+                      src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/dcb7f82e-bf8a-4d5c-8c36-ce765f8a2932_800w.jpg"
+                      alt="Video platform"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/60"></div>
+                    <div className="absolute top-2 sm:top-3 left-2 sm:left-3">
+                      <span className="inline-flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-white/90 bg-white/10 border-white/15 border rounded-full py-1 sm:py-1.5 px-1.5 sm:px-2 backdrop-blur">
+                        <Play className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      </span>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-white/20 backdrop-blur flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <Play className="h-5 w-5 sm:h-6 sm:w-6 text-white ml-0.5 sm:ml-1" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-2.5 sm:p-3">
+                    <h3 className="text-xs sm:text-sm font-medium text-white tracking-tight">Video Platform</h3>
+                    <p className="text-[10px] sm:text-xs text-neutral-400 mt-0.5 sm:mt-1">Streaming interface</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -148,25 +198,27 @@ function ProjectCard({
   description: string
 }) {
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 group hover:border-white/20 transition-all duration-300">
-      <div className="aspect-square relative overflow-hidden">
-        <Image
-          src={image || "/placeholder.svg"}
-          alt={title}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/60"></div>
-        <div className="absolute top-2 sm:top-3 left-2 sm:left-3">
-          <span className="inline-flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-white/90 bg-white/10 border-white/15 border rounded-full py-1 sm:py-1.5 px-1.5 sm:px-2 backdrop-blur">
-            {icon}
-          </span>
+    <a href="/case-study/rta-public-transport" className="block">
+      <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 group hover:border-white/20 transition-all duration-300">
+        <div className="aspect-square relative overflow-hidden">
+          <Image
+            src={image || "/placeholder.svg"}
+            alt={title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/60"></div>
+          <div className="absolute top-2 sm:top-3 left-2 sm:left-3">
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-white/90 bg-white/10 border-white/15 border rounded-full py-1 sm:py-1.5 px-1.5 sm:px-2 backdrop-blur">
+              {icon}
+            </span>
+          </div>
+        </div>
+        <div className="p-2.5 sm:p-3">
+          <h3 className="text-xs sm:text-sm font-medium text-white tracking-tight">{title}</h3>
+          <p className="text-[10px] sm:text-xs text-neutral-400 mt-0.5 sm:mt-1">{description}</p>
         </div>
       </div>
-      <div className="p-2.5 sm:p-3">
-        <h3 className="text-xs sm:text-sm font-medium text-white tracking-tight">{title}</h3>
-        <p className="text-[10px] sm:text-xs text-neutral-400 mt-0.5 sm:mt-1">{description}</p>
-      </div>
-    </div>
+    </a>
   )
 }

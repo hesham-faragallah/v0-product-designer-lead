@@ -1,69 +1,73 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight, BadgeCheck, Star } from "lucide-react"
+import { ChevronLeft, ChevronRight, BadgeCheck } from "lucide-react"
 import Image from "next/image"
 
 const allTestimonials = [
   {
-    name: "Sarah Chen",
-    role: "CMO",
-    company: "TechFlow Solutions",
-    image:
-      "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c0f3907b-87b7-4671-99d8-ab70af2fa691_320w.jpg",
+    name: "Muna AlMehairibi",
+    role: "Head of Planning and Design of Digital Services",
+    company: "RTA",
+    image: "/muna-avatar.png",
     quote:
-      "FluxScale increased our ROAS by 340% in just 3 months. Their data‑driven approach and creative testing methodology transformed our acquisition strategy.",
-    rating: 5,
+      "Hesham, I can confidently say you are an exceptionally talented and experienced professional in the UX field. The amazing achievements within short time is well noticed within the organization. You have strong foundation in design principles and keen eye for details, I like the creativity that you add in each project which creates unique product.",
   },
   {
-    name: "Marcus Rodriguez",
-    role: "Growth Lead",
-    company: "Velocity Commerce",
-    image:
-      "https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/f7f6feef-fd3e-4901-bce6-7271aa74dc87_320w.jpg",
+    name: "Rodrigo de Mingo",
+    role: "Chief of Digital Experience | CX/UX/UI | AI & MaaS Innovation",
+    company: "RTA",
+    image: "/rodrigo-avatar.png",
     quote:
-      "The team reduced our CAC by 65% while scaling spend 4×. Their transparent reporting and rapid iteration cycle keeps us ahead of the competition.",
-    rating: 5,
+      "Hesham is a talented designer and great person to work with. He is very innovative and always looking for new solutions and fresh ideas that can advance his knowledge to exceed his client's expectations and goals. He has multiple workshops and usability sessions together, he is an enthusiastic and driven UX Designer with excellent UI skills.",
   },
   {
-    name: "Jessica Park",
-    role: "Founder",
-    company: "Peak Performance Co",
-    image:
-      "https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/2201bb49-ba9d-4655-9360-c0350107a9fd_320w.jpg",
+    name: "Ahmed Moneim",
+    role: "Regional Customer Engagement Manager",
+    company: "EdTech, AI & Digital Services",
+    image: "/ahmed-avatar.png",
     quote:
-      "From launch to scale in 6 weeks. FluxScale's systematic approach to creative testing and performance optimization delivered results beyond our expectations.",
-    rating: 5,
+      "Hesham is not only a creative UX engineer who understands well the user experience principles, tools, and techniques, but also a strong team player, customer-driven, and value-driven passionate. Thanks, Hesham; I'm lucky to have you on the team.",
   },
   {
-    name: "David Kim",
-    role: "VP Marketing",
-    company: "Nexus Digital",
-    image:
-      "https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/c1bfea42-f5c9-4b52-974e-36fe36212b17_320w.jpg",
+    name: "Mohammad Hamdan",
+    role: "Manager",
+    company: "Web & Mobile Projects",
+    image: "/mohammad-avatar.png",
     quote:
-      "FluxScale transformed our entire funnel optimization approach. We saw 280% improvement in conversion rates within the first quarter of working together.",
-    rating: 5,
+      "Hesham is very Really amazing Designer who Take care about his tasks and doing very well. I worked with him more than 5 years, I never reject his work at all because he is submitted it at right way, also he is very hard worker never say no for work.",
   },
   {
-    name: "Emma Thompson",
-    role: "CEO",
-    company: "Apex Ventures",
-    image:
-      "https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/b6d79211-32f1-430e-96b3-9b4d857c1482_320w.jpg",
+    name: "Amr Osama",
+    role: "Digital Transformation Expert",
+    company: "",
+    image: "/amr-avatar.png",
     quote:
-      "Working with FluxScale has been game‑changing. Their strategic approach to creative testing helped us break through our growth plateau and achieve sustainable scale.",
-    rating: 5,
+      "While we were working on website I was impressed by his professionalism and readiness to help. No matter of task complexity he jumps straight ahead into finding solution. I highly recommend hesham for UX design!",
   },
   {
-    name: "Ryan Mitchell",
-    role: "Co‑Founder",
-    company: "Scale Dynamics",
-    image:
-      "https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/5bf79840-b7ed-4d8d-acd3-c5f5835a065e_320w.jpg",
+    name: "Abdulfattah Omar",
+    role: "IT Project Manager",
+    company: "",
+    image: "/abdulfattah-avatar.png",
     quote:
-      "The ROI improvements speak for themselves—450% increase in 8 weeks. FluxScale's data‑driven methodology and execution speed are unmatched in the industry.",
-    rating: 5,
+      "It was very pleasure to work with Mr. Hesham, extremely valuable person to have on your network. His responses are timely, value-added, and he's open to working with new people. He has a very impressive background in as a designer and profile and I recommend Mr.hesham as an expert to connect with and consider for everything appropriate.",
+  },
+  {
+    name: "Mahmoud Eid Abdellatif",
+    role: "Senior Technical Team Lead",
+    company: "Digital Transformation",
+    image: "/mahmoud-avatar.png",
+    quote:
+      "Hesham is a talented designer and great to work with. Not only he is an amazing designer, but he has ingenious web skills with an eye for detail.",
+  },
+  {
+    name: "Mustafa Elmagar",
+    role: "Product Owner",
+    company: "",
+    image: "/mustafa-avatar.png",
+    quote:
+      "I worked with Hesham in many freelancing projects. He is one of the most recommended ui developers and designers that I recommend for my clients as he always came out with a very beautiful designs that make the clients are totally satisfied. Hesham also working with agile mindset and fast learner for new technologies, we worked on long terms projects side to side and he is totally agile in executing the sprints and always giving a constructive feedback that power everything.",
   },
 ]
 
@@ -98,14 +102,11 @@ export function Testimonials() {
         <div className="text-center max-w-4xl mx-auto px-4">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur">
             <BadgeCheck className="h-4 w-4 text-sky-300" />
-            <span className="text-xs font-medium text-slate-200/90">Client Success</span>
+            <span className="text-xs font-medium text-slate-200/90">What they Say</span>
           </div>
           <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl tracking-tight font-semibold text-slate-100">
-            What our partners say about driving growth.
+            Real stories from people
           </h2>
-          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-300/90 leading-relaxed">
-            Real results from real brands. See how we've helped companies scale their acquisition and maximize ROI.
-          </p>
         </div>
 
         <div className="mt-8 sm:mt-10 relative">
@@ -174,14 +175,12 @@ function TestimonialCard({
   company,
   image,
   quote,
-  rating,
 }: {
   name: string
   role: string
   company: string
   image: string
   quote: string
-  rating: number
 }) {
   return (
     <div className="relative overflow-hidden rounded-xl sm:rounded-2xl ring-1 ring-white/10 bg-white/5 p-4 sm:p-5 md:p-6">
@@ -193,11 +192,6 @@ function TestimonialCard({
           height={36}
           className="rounded-full ring-1 ring-white/10 object-cover"
         />
-      </div>
-      <div className="mt-3 flex items-center gap-1 text-slate-100">
-        {Array.from({ length: rating }).map((_, i) => (
-          <Star key={i} className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-white" />
-        ))}
       </div>
       <p className="mt-3 text-sm sm:text-base text-slate-300/90 leading-relaxed">{quote}</p>
       <div className="mt-4 sm:mt-5 pt-3 border-t border-white/10">
