@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { ContentProtection } from "@/components/content-protection"
 import "./globals.css"
 
 const inter = Inter({
@@ -27,6 +28,7 @@ export default function RootLayout({
         className={`font-sans ${inter.variable}`}
         style={{ fontFamily: "var(--font-inter), ui-sans-serif, system-ui" }}
       >
+        <ContentProtection />
         {children}
         <Analytics />
       </body>
