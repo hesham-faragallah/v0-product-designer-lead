@@ -15,6 +15,14 @@ export const metadata: Metadata = {
   title: "Product Designer Lead — Portfolio",
   description: "Transforming complex problems into elegant, user-centered solutions",
   generator: "v0.app",
+  icons: {
+    icon: [
+      { url: "/mylogo.png", sizes: "32x32", type: "image/png" },
+      { url: "/mylogo.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/mylogo.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/mylogo.png",
+  },
 }
 
 export default function RootLayout({
