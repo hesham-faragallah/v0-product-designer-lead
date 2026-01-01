@@ -109,3 +109,5 @@ export function ContactCTA() {
     </section>
   )
 }
+
+export default ContactCTA

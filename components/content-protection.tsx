@@ -166,17 +166,6 @@ export function ContentProtection() {
       return false
     }
 
-    const detectDevTools = () => {
-      const threshold = 160
-      const widthThreshold = window.outerWidth - window.innerWidth > threshold
-      const heightThreshold = window.outerHeight - window.innerHeight > threshold
-
-      if (widthThreshold || heightThreshold) {
-        document.body.innerHTML =
-          '<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#000;color:#fff;font-family:system-ui;font-size:24px;text-align:center;padding:20px;">Developer tools are disabled on this website.</div>'
-      }
-    }
-
     const handleBeforePrint = (e: Event) => {
       e.preventDefault()
       document.body.style.display = "none"
@@ -212,7 +201,6 @@ export function ContentProtection() {
     document.addEventListener("touchstart", handleTouchStart, { passive: false })
     window.addEventListener("beforeprint", handleBeforePrint)
     window.addEventListener("afterprint", handleAfterPrint)
-    window.addEventListener("resize", detectDevTools)
 
     const disableImageDrag = () => {
       const images = document.querySelectorAll("img")
@@ -259,7 +247,6 @@ export function ContentProtection() {
       document.removeEventListener("touchstart", handleTouchStart)
       window.removeEventListener("beforeprint", handleBeforePrint)
       window.removeEventListener("afterprint", handleAfterPrint)
-      window.removeEventListener("resize", detectDevTools)
       observer.disconnect()
       clearInterval(consoleInterval)
     }
