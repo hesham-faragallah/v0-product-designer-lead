@@ -5,9 +5,6 @@ import {
   Users,
   Calendar,
   Award,
-  CheckCircle2,
-  Target,
-  Code2,
   Palette,
   Layout,
   Zap,
@@ -74,7 +71,7 @@ export default function DesignSystemDocumentationCaseStudy() {
                 <Award className="w-5 h-5 text-neutral-500" />
                 <div>
                   <p className="text-xs text-neutral-500">Platform</p>
-                  <p className="text-sm font-medium">Web, iOS, Android</p>
+                  <p className="text-sm font-medium">Web</p>
                 </div>
               </div>
             </div>
@@ -96,165 +93,22 @@ export default function DesignSystemDocumentationCaseStudy() {
         </div>
       </section>
 
-      {/* The Challenge */}
-      <section className="px-4 sm:px-6 lg:px-8 py-20 sm:py-28 bg-neutral-900/50">
+      {/* Stakeholder Research */}
+      <section className="px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="lg:col-span-4">
-              <h2 className="text-3xl sm:text-4xl font-light tracking-tight">The Challenge</h2>
+              <h2 className="text-3xl sm:text-4xl font-light tracking-tight">Stakeholder Research</h2>
             </div>
             <div className="lg:col-span-8 space-y-6">
               <p className="text-lg text-neutral-300 leading-relaxed">
-                As the company scaled from 3 to 15+ product teams, design inconsistencies multiplied exponentially.
-                Designers were recreating components from scratch, developers were implementing different solutions for
-                identical patterns, and accessibility standards varied wildly across products.
+                We conducted extensive interviews with designers, engineers, product managers, and accessibility
+                specialists to understand their needs and pain points.
               </p>
               <p className="text-neutral-400 leading-relaxed">
                 We needed a centralized design system that could serve as the single source of truth while remaining
                 flexible enough to accommodate diverse product needs without becoming a bottleneck to innovation.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stakeholder Research */}
-      <section className="px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl sm:text-4xl font-light tracking-tight mb-4">Stakeholder Research</h2>
-          <p className="text-neutral-400 mb-12 max-w-2xl">
-            We conducted extensive interviews with designers, engineers, product managers, and accessibility specialists
-            to understand their needs and pain points.
-          </p>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Designers */}
-            <div className="p-8 rounded-2xl bg-zinc-900/50 border border-white/10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center">
-                  <Palette className="w-6 h-6 text-indigo-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-medium">Designers</h3>
-                  <p className="text-sm text-neutral-500">Product & UX Teams</p>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div>
-                  <h4 className="text-teal-400 font-medium mb-3 flex items-center gap-2">
-                    <Target className="w-4 h-4" /> Needs
-                  </h4>
-                  <ul className="space-y-2 text-sm text-neutral-300">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" />
-                      Reusable components with clear usage guidelines
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" />
-                      Visual examples and interactive demos
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" />
-                      Figma library sync with production code
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Engineers */}
-            <div className="p-8 rounded-2xl bg-zinc-900/50 border border-white/10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
-                  <Code2 className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-medium">Engineers</h3>
-                  <p className="text-sm text-neutral-500">Frontend & Mobile</p>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div>
-                  <h4 className="text-teal-400 font-medium mb-3 flex items-center gap-2">
-                    <Target className="w-4 h-4" /> Needs
-                  </h4>
-                  <ul className="space-y-2 text-sm text-neutral-300">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" />
-                      Well-documented APIs and props
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" />
-                      Code examples with TypeScript
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" />
-                      Easy integration and versioning
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Product Managers */}
-            <div className="p-8 rounded-2xl bg-zinc-900/50 border border-white/10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
-                  <Target className="w-6 h-6 text-violet-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-medium">Product Managers</h3>
-                  <p className="text-sm text-neutral-500">Product Strategy</p>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div>
-                  <h4 className="text-teal-400 font-medium mb-3 flex items-center gap-2">
-                    <Target className="w-4 h-4" /> Needs
-                  </h4>
-                  <ul className="space-y-2 text-sm text-neutral-300">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" />
-                      Faster time-to-market with consistency
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" />
-                      Cross-platform feature parity
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-teal-400 mt-0.5 flex-shrink-0" />
-                      Brand consistency across products
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Pain Points */}
-          <div className="p-8 rounded-2xl bg-zinc-900/50 border border-white/10 mt-8">
-            <h3 className="text-xl font-medium mb-6 flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-indigo-400" />
-              Common Pain Points
-            </h3>
-
-            <div className="space-y-4">
-              {[
-                "I waste hours searching for the right component. Half the time I just rebuild it from scratch.",
-                "Design specs don't match what's in production. I never know which version is correct.",
-                "Every team has their own button component. We have 8 different implementations!",
-                "Accessibility is an afterthought. We fail audits because there's no consistent standard.",
-                "Documentation is either missing or outdated. I learn by reading the source code.",
-                "Design handoff is painful. Engineers ask the same questions repeatedly.",
-              ].map((quote, index) => (
-                <div key={index} className="flex gap-3">
-                  <span className="text-indigo-400 mt-0.5">"</span>
-                  <p className="text-neutral-300 text-sm leading-relaxed">{quote}</p>
-                </div>
-              ))}
             </div>
           </div>
         </div>
