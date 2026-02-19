@@ -165,7 +165,7 @@ export default function RTAPublicTransportCaseStudy() {
   const processOpacityTransform = useTransform(processScrollProgress, [0, 0.1], [0, 1])
 
   const handleUnlock = () => {
-    if (password === "Malek_Hesham") {
+    if (password === "Malek") {
       setIsUnlocked(true)
       setError("")
     } else {
